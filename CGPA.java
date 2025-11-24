@@ -75,7 +75,9 @@ class CGPA {
                     totalSum += subjectTotal;
 
                     Gradepoint(subjectTotal);
-
+                    System.out.println("Enter Attendance Percentage:");
+                    double attendance_percentage = sc.nextDouble();
+                    attendence(attendance_percentage);
 
                 }else if (midsem_check.equalsIgnoreCase("no")){
                     double[] marks = new double[3];
@@ -92,6 +94,9 @@ class CGPA {
                     totalSum += subjectTotal;
 
                     Gradepoint(subjectTotal);
+                    System.out.println("Enter Attendance Percentage:");
+                    double attendance_percentage = sc.nextDouble();
+                    attendence(attendance_percentage);
 
                 } else {
                     System.out.println("Invallid input try again!");
@@ -122,6 +127,9 @@ class CGPA {
                 totalSum += subjectTotal;
 
                 Gradepoint(subjectTotal);
+                System.out.println("Enter Attendance Percentage:");
+                double attendance_percentage = sc.nextDouble();
+                attendence(attendance_percentage);
 
             }else if (endpractical.equalsIgnoreCase("Project")){
                 //review marks
@@ -142,6 +150,9 @@ class CGPA {
                 totalSum += subjectTotal;
 
                 Gradepoint(subjectTotal);
+                System.out.println("Enter Attendance Percentage:");
+                double attendance_percentage = sc.nextDouble();
+                attendence(attendance_percentage);
 
             }else if (endpractical.equalsIgnoreCase("online")){
                 double[] internals = new double[5];
@@ -192,9 +203,6 @@ class CGPA {
         System.out.println("Enter the number of Subjects:");
         int T = sc.nextInt();
         sc.nextLine();
-//
-//        System.out.println("Enter your attendance percentage for " + ":");
-//        double attendance_percentage = sc.nextDouble();
 
         double average = calculateCGPA(sc, T);
         System.out.println("Your overall CGPA is: " + average);
